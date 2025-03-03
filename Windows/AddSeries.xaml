@@ -1,0 +1,51 @@
+﻿<Window x:Class="BingeBox_WPF.Windows.AddSeries"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:BingeBoxLib_WPF.Models;assembly=BingeBoxLib_WPF"
+        xmlns:local="clr-namespace:BingeBox_WPF.Windows"
+        mc:Ignorable="d"
+        Title="AddSeries" Height="350" Width="450">
+    <Grid>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Label Height="30" FontSize="12" Content="Series Name:" x:Name="SeriesNameLbl"/>
+                <TextBox Width="200" Height="20" FontSize="12" x:Name="SeriesNameTxt" Text="{Binding SeriesName}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <Button x:Name="BrowseBtn" Width="75" Height="35" Content="Browse..." Margin="20,0,0,0" Click="BrowseBtn_Click"/>
+                <TextBlock Text="{Binding Location, UpdateSourceTrigger=PropertyChanged}" Width="Auto" VerticalAlignment="Center" Margin="20,0,0,0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <Label Content="Is The Series Episodic?" VerticalAlignment="Center"/>
+                <CheckBox x:Name="IsEpisodicCkBx" VerticalAlignment="Center" />
+            </StackPanel>
+            <Button x:Name="AddSeriesBtn" Grid.Row="4" Content="Add Series" Width="75" Height="25" Click="AddSeriesBtn_Click"/>
+        </Grid>
+        <!--<TreeView Grid.Column="1" ItemsSource="{Binding series}">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate DataType="{x:Type models:Series}" ItemsSource="{Binding Seasons}">
+                    <TextBlock Text="{Binding SeriesName}"/>
+                    <HierarchicalDataTemplate.ItemTemplate>
+                        <HierarchicalDataTemplate DataType="{x:Type models:Season}" ItemsSource="{Binding Episodes}">
+                            <TextBlock Text="{Binding SeasonName}"/>
+                            <HierarchicalDataTemplate.ItemTemplate>
+                                <DataTemplate DataType="{x:Type models:Episode}">
+                                    <TextBlock Text="{Binding EpisodeName}"/>
+                                </DataTemplate>
+                            </HierarchicalDataTemplate.ItemTemplate>
+                        </HierarchicalDataTemplate>
+                    </HierarchicalDataTemplate.ItemTemplate>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>-->
+    </Grid>
+</Window>

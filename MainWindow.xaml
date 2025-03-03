@@ -1,0 +1,58 @@
+﻿<Window x:Class="BingeBox_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vlc="clr-namespace:LibVLCSharp.WPF;assembly=LibVLCSharp.WPF"
+        xmlns:local="clr-namespace:BingeBox_WPF"
+        xmlns:controls="clr-namespace:BingeBox_WPF.Controls"
+        mc:Ignorable="d"
+        
+        Title="MainWindow" Height="450" Width="800">
+    <!--AllowsTransparency="true"
+WindowStyle="None"-->
+    <Grid>
+        <Grid x:Name="MainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid x:Name="FS_ControlGrid" Visibility="Hidden" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Grid.RowSpan="2" Grid.ColumnSpan="2">
+                <StackPanel x:Name="ControlPanel" Orientation="Vertical">
+                    <Slider Grid.Row="1" x:Name="TrackBar" Margin="10,5,10,0" Minimum="0"/>
+
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="PrevBtn" Content="⏮️" Width="30" Height="30" FontSize="18" Margin="5,15,5,10"/>
+                        <Button x:Name="PlayBtn" Content="⏯️" Width="30" Height="30" FontSize="18" Margin="5,15,5,10"/>
+                        <Button x:Name="NextBtn" Content="⏭️" Width="30" Height="30" FontSize="18" Margin="5,15,5,10"/>
+                        <Button x:Name="FullScreenBtn" Content="⛶" Width="30" Height="30" FontSize="18" Margin="5,15,5,10"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            
+            <Grid x:Name="OuterGrid" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            </Grid>
+            <controls:ToolBar x:Name="_toolBar" Grid.ColumnSpan="2" Loaded="ToolBar_Loaded"/>
+
+            <Grid x:Name="VideoControlWrapper" Grid.Row="1" Grid.Column="0">
+                <!--<controls:VLCControl x:Name="VideoControl" Loaded="VideoControl_Loaded"/>-->
+                <controls:CompositionPlayer x:Name="VideoControl" Loaded="VideoControl_Loaded"/>
+            </Grid>
+            
+            
+            <Grid x:Name="PlayListParent" Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <controls:PlaylistControl x:Name="_playlistControl" Grid.Row="0" Loaded="_playlistControl_Loaded"/>
+                <controls:MediaInfo Grid.Row="1"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

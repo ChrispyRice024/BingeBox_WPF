@@ -1,0 +1,14 @@
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\BingeBox_WPF.csproj.AssemblyReference.cache
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\Controls\MediaInfo.g.cs
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\Controls\PlaybackControls.g.cs
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\Controls\PlaylistControl.g.cs
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\Controls\SeriesListControl.g.cs
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\Controls\ToolBar.g.cs
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\Controls\VLCControl.g.cs
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\MainWindow.g.cs
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\Windows\AddSeries.g.cs
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\Windows\FloatingWindow.g.cs
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\App.g.cs
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\GeneratedInternalTypeHelper.g.cs
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\BingeBox_WPF_MarkupCompile.cache
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net9.0-windows10.0.18362.0\BingeBox_WPF_MarkupCompile.lref

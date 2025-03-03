@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="BingeBox_WPF.Controls.SeriesListControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BingeBox_WPF.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="400">
+    <Grid>
+        <!--ItemsSource="{Binding Source={StaticResource fullSeriesList}}"-->
+        <ListView >
+            <ListView.View>
+                <GridView ColumnHeaderToolTip="Sereis Name">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=SeriesName}" Header="Series Name"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=TotalSeasons}" Header="Total Seasons"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=TotaEpisodes}" Header="Total Episodes"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=IsEpisodic}" Header="Is Episodic"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

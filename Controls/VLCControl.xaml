@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="BingeBox_WPF.Controls.VLCControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vlc="clr-namespace:LibVLCSharp.WPF;assembly=LibVLCSharp.WPF"
+             xmlns:i="clr-namespace:System.Windows.Interop;assembly=PresentationCore"
+             xmlns:local="clr-namespace:BingeBox_WPF.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="322.5" d:DesignWidth="533.33">
+    <Grid>
+        <Grid x:Name="PlayerGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition x:Name="ControlBar" Height="80"/>
+            </Grid.RowDefinitions>
+
+
+
+            <vlc:VideoView Grid.Row="0" x:Name="VideoPlayer"
+                       MouseMove="VideoPlayer_MouseMove"
+                       MediaElement.MediaEnded="VideoPlayer_MediaEnded"
+                       Background="Black"></vlc:VideoView>
+            <!---->
+            <!--ValueChanged="TrackBar_ValueChanged"-->
+            <!--Thumb.DragStarted="TrackBar_DragStarted" Thumb.DragCompleted="TrackBar_DragCompleted"-->
+            <!--Value="{Binding ElementName=VideoPlayer, Path=MediaPlayer.Time, Mode=TwoWay}"-->
+
+        </Grid>
+        
+    </Grid>
+</UserControl>

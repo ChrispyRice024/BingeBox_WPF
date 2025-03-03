@@ -1,0 +1,1 @@
+C:\Users\chris\source\repos\BingeBox_WPF\obj\Debug\net8.0-windows7.0\BingeBox_WPF.csproj.AssemblyReference.cache
